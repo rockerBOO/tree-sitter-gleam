@@ -1,0 +1,47 @@
+[
+  {
+    "type": "false",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "source_file",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "false",
+          "named": true
+        },
+        {
+          "type": "true",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "true",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "False",
+    "named": false
+  },
+  {
+    "type": "True",
+    "named": false
+  },
+  {
+    "type": "false",
+    "named": false
+  },
+  {
+    "type": "true",
+    "named": false
+  }
+]

@@ -1,0 +1,76 @@
+{
+  "name": "gleam",
+  "word": "identifier",
+  "rules": {
+    "source_file": {
+      "type": "REPEAT",
+      "content": {
+        "type": "SYMBOL",
+        "name": "_statement"
+      }
+    },
+    "_statement": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_expression_statement"
+        }
+      ]
+    },
+    "_expression_statement": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "false"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "true"
+        }
+      ]
+    },
+    "false": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "false"
+        },
+        {
+          "type": "STRING",
+          "value": "False"
+        }
+      ]
+    },
+    "true": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "true"
+        },
+        {
+          "type": "STRING",
+          "value": "True"
+        }
+      ]
+    },
+    "identifier": {
+      "type": "PATTERN",
+      "value": "[a-zA-Z]+"
+    }
+  },
+  "extras": [
+    {
+      "type": "PATTERN",
+      "value": "\\s"
+    }
+  ],
+  "conflicts": [],
+  "externals": [],
+  "inline": [],
+  "supertypes": []
+}
+
