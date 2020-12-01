@@ -8,4 +8,25 @@ let z = x
 
 ---
 
-(source_file (binding (identifier) (integer)) (binding (identifier) (string)) (binding (identifier) (identifier)))
+(source_file 
+ (binding (identifier) (integer)) 
+ (binding (identifier) (string)) 
+ (binding (identifier) (identifier))
+)
+
+====
+List
+====
+
+[1, 2, 3, 4]
+[1.22, 2.30]
+// TODO prepending [1, ..[2, 3]]
+
+---
+
+(source_file 
+ (list (integer) (integer) (integer) (integer)) 
+ (list (float (_integer) (_integer)) (float (_integer) (_integer))) 
+ (comment)
+)
+

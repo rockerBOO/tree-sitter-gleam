@@ -41,9 +41,12 @@ module.exports = grammar({
         $.binary_expression,
         $._boolean,
         $._literal,
-				$.string,
-				$.identifier
+        $.string,
+        $.identifier,
+        $.list
       ),
+
+    _value: ($) => choice($._boolean, $.string, $.identifier, $._literal),
 
     _declaration: ($) => choice($.binding),
 
@@ -63,6 +66,14 @@ module.exports = grammar({
     _boolean: ($) => choice($.false, $.true),
 
     binding: ($) => seq("let", $.identifier, "=", $._expression, $._end),
+
+    list: ($) =>
+      prec.right(
+        seq("[", prec.right(repeat(seq(optional(","), $._value))), "]")
+      ),
+
+		_remaining: $ => '..',
+
     _operators: ($) => prec.right(choice($.int_operator, $.float_operator)),
 
     int_operator: () => choice("+", "-", "/", "*", "%", ">", "<", ">=", "<="),
@@ -73,10 +84,10 @@ module.exports = grammar({
     string: () => seq('"', repeat(choice(seq("\\", '"'), /[^"]/)), '"'),
 
     integer: () => /[0-9][0-9_]*/,
-		_integer: ($) => alias($.integer, $._integer),
-		float: ($) => {
-			return seq(field('left', $._integer), ".", field('right', $._integer))
-		},
+    _integer: ($) => alias($.integer, $._integer),
+    float: ($) => {
+      return seq(field("left", $._integer), ".", field("right", $._integer));
+    },
 
     false: () => choice("false", "False"),
     true: () => choice("true", "True"),

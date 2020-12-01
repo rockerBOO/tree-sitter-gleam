@@ -36,6 +36,10 @@
           "named": true
         },
         {
+          "type": "list",
+          "named": true
+        },
+        {
           "type": "string",
           "named": true
         },
@@ -76,6 +80,10 @@
         },
         {
           "type": "integer",
+          "named": true
+        },
+        {
+          "type": "list",
           "named": true
         },
         {
@@ -135,6 +143,41 @@
     "fields": {}
   },
   {
+    "type": "list",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "false",
+          "named": true
+        },
+        {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "integer",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "true",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "source_file",
     "named": true,
     "fields": {},
@@ -164,6 +207,10 @@
         },
         {
           "type": "integer",
+          "named": true
+        },
+        {
+          "type": "list",
           "named": true
         },
         {
@@ -220,6 +267,10 @@
           "named": true
         },
         {
+          "type": "list",
+          "named": true
+        },
+        {
           "type": "string",
           "named": true
         },
@@ -260,6 +311,10 @@
   },
   {
     "type": "+.",
+    "named": false
+  },
+  {
+    "type": ",",
     "named": false
   },
   {
@@ -327,7 +382,15 @@
     "named": false
   },
   {
+    "type": "[",
+    "named": false
+  },
+  {
     "type": "\\",
+    "named": false
+  },
+  {
+    "type": "]",
     "named": false
   },
   {
