@@ -1,6 +1,6 @@
 # tree-sitter-gleam
 
-Gleam grammar for [tree-sitter](https://github.com/tree-sitter/tree-sitter)
+[Gleam](https://gleam.run/) grammar for [tree-sitter](https://github.com/tree-sitter/tree-sitter)
 
 ## Status: WIP
 
