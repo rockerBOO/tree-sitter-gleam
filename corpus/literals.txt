@@ -8,3 +8,16 @@ false
 ---
 
 (source_file (true) (false))
+
+====
+Comments
+====
+
+// Yo
+
+true // true
+1 // one
+
+---
+
+(source_file (comment) (true) (comment) (integer) (comment))

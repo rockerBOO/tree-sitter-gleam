@@ -1,13 +1,13 @@
 {
-  "name": "tree-sitter-rust",
-  "version": "0.17.0",
-  "description": "Rust grammar for tree-sitter",
+  "name": "tree-sitter-gleam",
+  "version": "0.1.0",
+  "description": "Gleam grammar for tree-sitter",
   "main": "index.js",
   "keywords": [
     "parser",
     "rust"
   ],
-  "author": "Maxim Sokolov <maxim0xff@gmail.com> (https://github.com/MaximSokolov)",
+  "author": "Dave Lage <rockerBOO@gmail.com> (https://github.com/rockerBOO)",
   "license": "MIT",
   "dependencies": {
     "nan": "^2.8.0"
@@ -16,13 +16,15 @@
     "tree-sitter-cli": "^0.17.3"
   },
   "scripts": {
+		"build": "tree-sitter generate",
+		"build-test": "tree-sitter generate && tree-sitter test",
     "test": "tree-sitter test && script/parse-examples",
     "test-windows": "tree-sitter test"
   },
   "tree-sitter": [
     {
-      "scope": "source.rust",
-      "injection-regex": "rust",
+      "scope": "source.gleam",
+      "injection-regex": "gleam",
       "file-types": [
         "rs"
       ]

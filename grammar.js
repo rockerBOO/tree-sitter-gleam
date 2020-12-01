@@ -21,7 +21,7 @@ const primitive_types = numeric_types.concat(['bool', 'str', 'char'])
 module.exports = grammar({
   name: 'gleam',
 
-  extras: $ => [/\s/],
+  extras: $ => [/\s/, $.comment],
 
 
   word: $ => $.identifier,
@@ -33,12 +33,28 @@ module.exports = grammar({
       $._expression_statement,
     ),
 
-		_expression_statement: $ => choice($.false, $.true),
+		_expression_statement: $ => choice($._boolean, $._literal),
+
+		_literal: $ => choice($.integer),
+		_boolean: $ => choice($.false, $.true),
+
+		integer: $ => token(seq(
+      choice(
+        /[0-9][0-9_]*/,
+        /0x[0-9a-fA-F_]+/,
+        /0b[01_]+/,
+        /0o[0-7_]+/
+      )
+    )),
 
 		false: $ => choice('false', 'False'),
 		true: $ => choice('true', 'True'),
 
 		identifier: $ => /[a-zA-Z]+/,
+
+		comment: $ => token(seq(
+      '//', /[^\n]*/,
+    ))
   }
 })
 
