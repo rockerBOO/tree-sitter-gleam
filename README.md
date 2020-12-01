@@ -1,29 +1,17 @@
-# tree-sitter-rust
+# tree-sitter-gleam
 
-[![Build Status](https://travis-ci.org/tree-sitter/tree-sitter-rust.svg?branch=master)](https://travis-ci.org/tree-sitter/tree-sitter-rust)
-[![Build status](https://ci.appveyor.com/api/projects/status/q57l49j9ancaw0fs/branch/master?svg=true)](https://ci.appveyor.com/project/maxbrunsfeld/tree-sitter-rust/branch/master)
+Gleam grammar for [tree-sitter](https://github.com/tree-sitter/tree-sitter)
 
-Rust grammar for [tree-sitter](https://github.com/tree-sitter/tree-sitter)
+## Status: WIP
 
-## Features
+Adding grammar. Very open to pull requests to complete the grammar. 
 
-* **Speed** - When initially parsing a file, `tree-sitter-rust` takes around twice as long as Rustc's hand-coded parser.
+[ ] Literals
+[ ] Expressions
+[ ] Types
 
-  ```sh
-  $ wc -l examples/ast.rs
-    2157 examples/ast.rs
-
-  $ rustc -Z ast-json-noexpand -Z time-passes examples/ast.rs | head -n1
-    time: 0.007	parsing # (7 ms)
-
-  $ tree-sitter parse examples/ast.rs --quiet --time
-    examples/ast.rs	16 ms
-  ```
-
-  But if you *edit* the file after parsing it, this parser can generally *update* the previous existing syntax tree to reflect your edit in less than a millisecond, thanks to Tree-sitter's incremental parsing system.
 
 ## References
 
-* [The Rust Grammar Reference](https://doc.rust-lang.org/grammar.html) - The grammar reference provides chapters that formally define the language grammar.
-* [The Rust Reference](https://doc.rust-lang.org/reference/) - While Rust does not have a specification, the reference tries to describe its working in detail. It tends to be out of date.
-* [Syntax Index](https://doc.rust-lang.org/book/first-edition/syntax-index.html) - This appendix from The Book contains examples of all syntax in Rust cross-referenced with the section of The Book that describes it.
+* [Language Tour](https://gleam.run/book/tour/index.html)
+* [tree-sitter-rust](https://github.com/tree-sitter/tree-sitter-rust)
