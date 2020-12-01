@@ -39,53 +39,50 @@ Gleam"
 (source_file (string) (string) (string))
 
 ====
-Ints 
+Ints
 ====
 
 1
 2
 -3
 4001
-1 + 1 
-5 - 1 
-5 / 2 
-3 * 3 
-5 % 2 
+1 + 1
+5 - 1
+5 / 2
+3 * 3
+5 % 2
 
-2 > 1  
-2 < 1  
-2 >= 1 
-2 <= 1 
+2 > 1
+2 < 1
+2 >= 1
+2 <= 1
 
 1_000_000
 
 ---
 
-(source_file)
+(source_file (integer) (integer) (unary_expression (integer)) (integer) (binary_expression (integer) (int_operator) (integer)) (binary_expression (integer) (int_operator) (integer)) (binary_expression (integer) (int_operator) (integer)) (binary_expression (integer) (int_operator) (integer)) (binary_expression (integer) (int_operator) (integer)) (binary_expression (integer) (int_operator) (integer)) (binary_expression (integer) (int_operator) (integer)) (binary_expression (integer) (int_operator) (integer)) (binary_expression (integer) (int_operator) (integer)) (integer))
 
 ====
 Floats
 ====
 
----
-
 1.5
 2.0
 -0.1
 
-1.0 +. 1.4 
-5.0 -. 1.5 
-5.0 /. 2.0 
-3.0 *. 3.1 
+1.0 +. 1.4
+5.0 -. 1.5
+5.0 /. 2.0
+3.0 *. 3.1
 
-2.0 >. 1.0  
-2.0 <. 1.0  
-2.0 >=. 1.0 
-2.0 <=. 1.0 
+2.0 >. 1.0
+2.0 <. 1.0
+2.0 >=. 1.0
+2.0 <=. 1.0
 
 1_000_000.0
 
 ---
 
-(source_file)
-
+(source_file (float (_integer) (_integer)) (float (_integer) (_integer)) (unary_expression (float (_integer) (_integer))) (binary_expression (float (_integer) (_integer)) (float_operator) (float (_integer) (_integer))) (binary_expression (float (_integer) (_integer)) (float_operator) (float (_integer) (_integer))) (binary_expression (float (_integer) (_integer)) (float_operator) (float (_integer) (_integer))) (binary_expression (float (_integer) (_integer)) (float_operator) (float (_integer) (_integer))) (binary_expression (float (_integer) (_integer)) (float_operator) (float (_integer) (_integer))) (binary_expression (float (_integer) (_integer)) (float_operator) (float (_integer) (_integer))) (binary_expression (float (_integer) (_integer)) (float_operator) (float (_integer) (_integer))) (binary_expression (float (_integer) (_integer)) (float_operator) (float (_integer) (_integer))) (float (_integer) (_integer)))
