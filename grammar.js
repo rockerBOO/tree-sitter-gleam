@@ -33,10 +33,19 @@ module.exports = grammar({
       $._expression_statement,
     ),
 
-		_expression_statement: $ => choice($._boolean, $._literal),
+		_expression_statement: $ => choice($._boolean, $._literal, $.string),
 
 		_literal: $ => choice($.integer),
 		_boolean: $ => choice($.false, $.true),
+
+		string: $ => seq(
+      '"',
+      repeat(choice(
+        seq('\\', '"'),
+				/[^"]/
+      )),
+			'"'
+    ),
 
 		integer: $ => token(seq(
       choice(

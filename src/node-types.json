@@ -21,6 +21,10 @@
           "named": true
         },
         {
+          "type": "string",
+          "named": true
+        },
+        {
           "type": "true",
           "named": true
         }
@@ -28,9 +32,18 @@
     }
   },
   {
+    "type": "string",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "true",
     "named": true,
     "fields": {}
+  },
+  {
+    "type": "\"",
+    "named": false
   },
   {
     "type": "False",
@@ -38,6 +51,10 @@
   },
   {
     "type": "True",
+    "named": false
+  },
+  {
+    "type": "\\",
     "named": false
   },
   {

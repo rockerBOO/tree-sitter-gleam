@@ -21,3 +21,19 @@ true // true
 ---
 
 (source_file (comment) (true) (comment) (integer) (comment))
+
+
+====
+Strings
+====
+
+"Hello, Gleam!"
+
+"Hello
+Gleam"
+
+"Here is a doublequote -> \" <-"
+
+---
+
+(source_file (string) (string) (string))
