@@ -57,6 +57,10 @@
         {
           "type": "SYMBOL",
           "name": "string"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
         }
       ]
     },
@@ -156,7 +160,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "_expression"
+          "name": "identifier"
         },
         {
           "type": "STRING",

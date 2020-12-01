@@ -41,12 +41,14 @@ module.exports = grammar({
         $.binary_expression,
         $._boolean,
         $._literal,
-        $.string
+				$.string,
+				$.identifier
       ),
 
     _declaration: ($) => choice($.binding),
 
     unary_expression: ($) => seq(choice("-", "!"), $._expression),
+
     binary_expression: ($) =>
       prec.left(
         PREC.comparison,
@@ -59,7 +61,8 @@ module.exports = grammar({
 
     _literal: ($) => choice($.integer, $.float),
     _boolean: ($) => choice($.false, $.true),
-    binding: ($) => seq("let", $._expression, "=", $._expression, $._end),
+
+    binding: ($) => seq("let", $.identifier, "=", $._expression, $._end),
     _operators: ($) => prec.right(choice($.int_operator, $.float_operator)),
 
     int_operator: () => choice("+", "-", "/", "*", "%", ">", "<", ">=", "<="),

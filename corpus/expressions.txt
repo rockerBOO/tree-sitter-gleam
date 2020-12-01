@@ -1,1 +1,11 @@
+====
+Let expression
+====
 
+let x = 1
+let y = "1"
+let z = x
+
+---
+
+(source_file (binding (identifier) (integer)) (binding (identifier) (string)) (binding (identifier) (identifier)))
