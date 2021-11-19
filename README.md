@@ -2,7 +2,7 @@
 
 [Gleam](https://gleam.run/) grammar for [tree-sitter](https://github.com/tree-sitter/tree-sitter)
 
-## Status: WIP
+## Status: WIP use [greggreg's version](https://gitlab.com/greggreg/tree-sitter-gleam)
 
 Adding grammar. Very open to pull requests to complete the grammar. 
 
